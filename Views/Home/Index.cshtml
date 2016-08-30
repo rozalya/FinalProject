@@ -1,4 +1,8 @@
-﻿@{
+﻿@using GetFit.Classes;
+@using GetFit.Models;
+
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -20,8 +24,8 @@
                         <article class="post col-md-6">
                             <h2 class="title"><a href="/Posts/Details/@post.Id">@post.Title</a></h2>
                             <div class="about">
-                                Публикувано
-                                на <i>@post.Date</i>
+                               <i> Публикувано
+                                на @post.Date</i>
                                 @if (post.Author != null)
                                 {
                                     @: от
@@ -29,7 +33,8 @@
                                 }
 
                             </div>
-                            <div class="body">@Html.Raw(post.Body)</div>
+                            <div class="body">@Html.Raw(Utils.CutText(post.Body))</div>
+                            
                         </article>
                     }
                 </section>
