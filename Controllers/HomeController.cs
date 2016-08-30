@@ -14,7 +14,7 @@ namespace GetFit.Controllers
         public ActionResult Index()
         {
            
-            var posts = db.Post.Include(p => p.Author).OrderByDescending(p => p.Date).Take(3);
+            var posts = db.Post.Include(p => p.Author).OrderByDescending(p => p.Date).Take(4);
            
             return View(posts.ToList());
         }
