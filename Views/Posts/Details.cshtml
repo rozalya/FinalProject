@@ -1,0 +1,68 @@
+﻿@model GetFit.Models.Post
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Статия</h2>
+
+<dt class="details">
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Заглавия:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            Тяло:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Body)
+        </dd>
+        <dt>
+            Дата:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            Автор:
+        </dt>
+        <dd>
+            @if (Model.Author != null)
+            {
+                @Model.Author.FullName
+            }
+            else
+            {
+                <i>(Няма Автор)</i>
+            }
+        </dd>
+       
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+            
+  </dt>     
+   </dl>
+        
+     
+
+<div>
+    <p>
+        @if (User.IsInRole("Administrators") || (Model.Author != null && User.Identity.Name == Model.Author.UserName))
+        {
+            @Html.ActionLink("Добави", "Edit", new { id = Model.Id }) @:|
+         }
+        @Html.ActionLink("Обратно към списъка", "Index")
+    </p>
+</div>
