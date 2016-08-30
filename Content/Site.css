@@ -15,7 +15,7 @@ fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, {
+time, mark, audio, video,{
    	margin: 0;
 	padding: 0;
 	border: 0;
@@ -41,7 +41,7 @@ body {
     height: 100px;
     border-radius: 20px;
     color: #565656;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     text-align: center;
     font: 12px Lato-Light;
     padding: 10px;
@@ -71,7 +71,7 @@ body {
     font-weight: 200;
     height: auto;
     color: black;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     text-align: center;
     display: block;
     border-bottom: 8px solid #019c8c;
@@ -79,8 +79,8 @@ body {
      border: 2px solid grey;
       box-shadow: 10px 10px 5px grey;
 }
-.title{
-
+.title {
+         text-transform: uppercase;
          text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
@@ -112,7 +112,7 @@ table{
     font-weight: 200;
     height: 150px;
     color: #565656;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     text-align: center;
     border-bottom: 8px solid #019c8c;
     border-radius: 50px;
